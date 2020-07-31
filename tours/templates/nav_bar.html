@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" data-test="logo" href="/">{{ template_data.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" data-test="navigation">
+            <li class="nav-item ">
+                {% for dep, departure in template_data.departures %}
+                {% if dep == template_data.dep_active %}
+                <a class="nav-link active" href="/departures/{{ dep }}/" data-test="navlink">{{ departure }}</a>
+                {% else %}
+                <a class="nav-link " href="/departures/{{ dep }}/" data-test="navlink">{{ departure }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

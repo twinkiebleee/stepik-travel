@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ template_data.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    .crop-text-2 {
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+</style>
+<div class="container mt-3">
+
+    {% include 'nav_bar.html' %}
+
+    <!-- HERO -->
+
+    <div class="jumbotron text-center mt-4">
+        <h1 class="display-4">Всякие туры</h1>
+        <p class="lead">{{ template_data.subtitle }}</p>
+        <p class="mt-5 w-50 mx-auto">{{ template_data.description }}</p>
+    </div>
+
+    <!-- CARDS -->
+
+    {% include 'cards.html' %}
+
+</div>
+
+</body>
+</html>

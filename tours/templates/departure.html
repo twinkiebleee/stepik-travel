@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ template_data.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    .crop-text-2 {
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+</style>
+<div class="container mt-3">
+
+    {% include 'nav_bar.html' %}
+
+
+    <h1 class="display-5 mt-4">Летим <span data-test="from">{{ template_data.departure }}</span></h1>
+    <p class="mb-4">Найдено <span data-test="tourcount">{{ template_data.num_tours }}</span> туров, от <span
+            data-test="pricemin">{{ template_data.price.min }}</span>
+        до
+        <span data-test="pricemax">{{ template_data.price.max }}</span> и от <span data-test="nightsmax">{{ template_data.nights.min }}</span>
+        ночей
+        до <span
+                data-test="nightsmax">{{ template_data.nights.max }}</span> ночей</p>
+    <!-- HERO -->
+
+
+    <!-- CARDS -->
+
+    {% include 'cards.html' %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="row mt-5" data-test="cards">
+
+    {% for id, tour in template_data.tours %}
+    <div class="col-4" data-test="card">
+        <div class="card mb-3">
+            <img src="{{ tour.picture }}" class="card-img-top" width="300" height="200" data-test="picture">
+            <div class="card-body">
+                <h5 class="card-title text-truncate">{{ tour.country }}: {{ tour.title }}</h5>
+                <p class="crop-text-2">{{ tour.description }}</p>
+                <a href="/tours/{{ id }}" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

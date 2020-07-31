@@ -13,6 +13,9 @@
 
     {% include 'nav_bar.html' %}
 
+    <div class="display-5 mt-4">
+        <a href="/departures/{{ template_data.dep_active }}" class="text-decoration-none">Назад</a>
+    </div>
 
     <h1 class="display-3 mt-4" data-test="title">{{ template_data.tour.title }} {{ template_data.tour.stars }}
         <svg width="1em" height="1em" viewBox="0 0 16 20" class="bi bi-star-fill" fill="currentColor"

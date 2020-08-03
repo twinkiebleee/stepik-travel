@@ -5,10 +5,10 @@
         <div class="card mb-3">
             <a href="/tours/{{ id }}"><img src="{{ tour.picture }}" class="card-img-top" width="300" height="200" data-test="picture"></a>
             <div class="card-body">
-                <h5 class="card-title text-truncate">{{ tour.country }}: {{ tour.title }}</h5>
+                <h5 class="card-title text-truncate font-weight-bold">{{ tour.country }}: {{ tour.title }}</h5>
                 <p class="crop-text-2">{{ tour.description }}</p>
-                <h6 class="float-left">{{ tour.date }}, {{ tour.nights }} ночей, {{ tour.price }} P</h6>
-                <h6 class="float-right">{{ tour.stars }}★</h6>
+                <h6 class="float-left font-weight-bold">{{ tour.date }}, {{ tour.nights }} ночей, {{ tour.price }} P</h6>
+                <h6 class="float-right font-weight-bold">{{ tour.stars }}★</h6>
             </div>
         </div>
     </div>
